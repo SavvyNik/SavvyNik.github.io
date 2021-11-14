@@ -43,6 +43,28 @@
       transform: scale(1.03);
     transition: all .25s ease-in-out;
     }
+
+    .youtube-card {
+      background-image: url('imgs/youtube.png');
+      padding-top: 20px;
+      background-size: 45%;
+      background-repeat: no-repeat;
+      background-position-x: center;
+    }
+
+    .courses-card {
+      background-image: url('imgs/courses.png');
+      background-size: 50%;
+      background-repeat:no-repeat;
+      background-position-x: center;
+    }
+
+    .discord-card {
+      background-image: url('imgs/discord.png');
+      background-size: 100%;
+      background-repeat:no-repeat;
+      background-position-x: center;
+    }
   
   </style>
 
@@ -74,7 +96,7 @@
       <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
         <div class="col">
           <a href="https://youtube.com/c/savvynik" style="text-decoration: none;" target="_blank">
-            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg youtube-card">
             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
               <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">YouTube Videos that teach tech.</h2>
               <ul class="d-flex list-unstyled mt-auto">
@@ -97,7 +119,7 @@
   
         <div class="col">
           <a href="courses.html" style="text-decoration: none;">
-          <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-2.jpg');">
+          <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg courses-card">
             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
               <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Courses that you can take online.</h2>
               <ul class="d-flex list-unstyled mt-auto">
@@ -120,7 +142,7 @@
   
         <div class="col">
           <a href="https://discord.gg/P9QC2km" style="text-decoration: none;" target="_blank">
-          <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('imgs/discord.jpeg');">
+          <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg discord-card">
             <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
               <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">A helpful community that you can join.</h2>
               <ul class="d-flex list-unstyled mt-auto">
