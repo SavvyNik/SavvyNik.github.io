@@ -12,7 +12,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">  
   </head>
   <body>
-    
+  
 <main>
 
   <style>
@@ -23,6 +23,11 @@
       -moz-user-select: none;
       user-select: none;
     }
+
+   .invert {
+      -webkit-filter: invert(1);
+      filter: invert(1);
+   }
   
     @media (min-width: 768px) {
       .bd-placeholder-img-lg {
@@ -31,7 +36,7 @@
     }
   
     .nav-link {
-      color: black;
+      color: rgb(0, 0, 0);
     }
 
     .logo {
@@ -72,24 +77,30 @@
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
       <img class="logo" src="imgs/logo.png">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none px-3">
-        <span class="fs-4">SavvyNik</span>
+        <span id="savvy-link" class="fs-4">SavvyNik</span>
       </a>
 
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="videos.html#" class="nav-link">Videos</a></li>
-        <li class="nav-item"><a href="courses.html#" class="nav-link">Courses</a></li>
+        <li class="nav-item"><a href="https://learn.savvynik.com" class="nav-link">Courses</a></li>
         <li class="nav-item"><a href="#youtube" class="nav-link">YouTube</a></li>
         <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
       </ul>
     </header>
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+    <div class="d-flex float-end">
+      <div class="form-check form-switch" onclick="darkMode()">
+        <input class="form-check-input" type="checkbox" id="darkModeSwitch">
+        <label class="form-check-label" for="darkModeSwitch">Dark</label>
+      </div>
+    </div>
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4" id="savvy-header">
         <img width="80%" src="imgs/header.png">
     </header>
 
 
     <div class="container px-4 py-5" id="custom-cards">
-      <h2 class="pb-2 border-bottom">Over 3.5 Million Views</h2>
+      <h2 class="pb-2 border-bottom">Over 4.0 Million Views</h2>
   
       <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
         <div class="col">
@@ -116,7 +127,7 @@
         </div>
   
         <div class="col">
-          <a href="courses.html" style="text-decoration: none;">
+          <a href="https://learn.savvynik.com" style="text-decoration: none;" class="bg-dark">
           <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg courses-card">
             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
               <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Courses that you can take online.</h2>
@@ -183,26 +194,26 @@
     </div>
 
     <div class="container py-4">  
-      <div class="p-5 mb-4 bg-light rounded-3">
+      <div id="courses" class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-5">
-          <h1 class="display-5 fw-bold">New Courses!</h1>
-          <p class="col-md-8 fs-4"> Courses are now available on the courses tab. I'm constantly working on creating more. Step through a series of videos to learn about a specific topic and go from a beginner to an advanced user.</p>
-          <a href="courses.html"><button class="btn btn-primary btn-lg" type="button">Courses</div></a>
+          <h1 class="display-5 fw-bold">New Content!</h1>
+          <p class="col-md-8 fs-4"> Digital content is now available on the courses tab. I'm constantly working on creating more. Explore the world of Linux with a Checklist and Mind Map of the Linux System.</p>
+          <a href="https://learn.savvynik.com"><button class="btn btn-primary btn-lg" type="button">Learn</div></a>
       </div>
   
       <div class="row align-items-md-stretch">
         <div class="col-md-6">
-          <div class="h-100 p-5 text-white bg-dark rounded-3">
+          <div class="h-100 p-5 text-white bg-dark rounded-3 border">
             <h2>Build a Custom Webpage</h2>
             <p>In this course, I'll teach you how to build your own custom landing web page or portfolio. Learn how to setup a project, use a framework, and keep your website mobile friendly with many tips & tricks. </p>
-            <a href="courses.html"><button class="btn btn-outline-light" type="button">Web Course</button></a>
+            <a href="https://learn.savvynik.com"><button class="btn btn-outline-light" type="button">Web Course</button></a>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="h-100 p-5 bg-light border rounded-3">
+          <div id="networking" class="h-100 p-5 bg-light border rounded-3">
             <h2>Networking</h2>
             <p>Ever wonder how networks work? Routers, ethernet, addressing, etc, keep us connected to the internet. Learn about local networks, troubleshooting, and how it communicates to the outside world.</p>
-            <a href="courses.html"><button class="btn btn-outline-secondary" type="button">Networks</button></a>
+            <a href="https://learn.savvynik.com"><button id="network-button" class="btn btn-outline-dark" type="button">Networks</button></a>
           </div>
         </div>
       </div>
@@ -256,7 +267,7 @@
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
         <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Videos</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Courses</a></li>
+        <li class="nav-item"><a href="https://learn.savvynik.com" class="nav-link px-2 text-muted">Courses</a></li>
         <li class="nav-item"><a href="#youtube" class="nav-link px-2 text-muted">YouTube</a></li>
         <li class="nav-item"><a href="#about" class="nav-link px-2 text-muted">About</a></li>
       </ul>
@@ -266,6 +277,44 @@
 </main>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    let dark = 0;
+      function darkMode() {
+         var element = document.body;
+         element.classList.toggle("bg-dark");
+         element.classList.toggle("text-light");
+         element = document.getElementById("savvy-header")
+         element.classList.toggle("invert");
+
+         element = document.getElementById("savvy-link")
+         element.classList.toggle("text-light");
+
+         element = document.getElementById("courses")
+         element.classList.toggle("bg-dark");
+
+         element = document.getElementById("networking")
+         element.classList.toggle("bg-dark");
+
+         element = document.getElementById("network-button")
+         element.classList.toggle("bg-light");
+
+         if(!dark){
+          element = document.querySelectorAll(".nav-link");
+          for (let i = 0; i < element.length; i++) {
+              element[i].style.color = "white";
+          }
+          dark=1;
+         }
+         else {
+          element = document.querySelectorAll(".nav-link");
+          for (let i = 0; i < element.length; i++) {
+              element[i].style.color = "black";
+          }
+          dark=0;
+         }
+      }
+      </script>
 
   </body>
 </html>
