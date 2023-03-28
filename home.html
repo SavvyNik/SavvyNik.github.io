@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.88.1">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <title>SavvyNik</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">  
+  </head>
+  <body>
+  
+<main>
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+   .invert {
+      -webkit-filter: invert(1);
+      filter: invert(1);
+   }
+  
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  
+    .nav-link {
+      color: rgb(0, 0, 0);
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+    }
+
+    .card:hover{
+      transform: scale(1.03);
+    transition: all .25s ease-in-out;
+    }
+
+    .youtube-card {
+      background-image: url('imgs/youtube.png');
+      padding-top: 20px;
+      background-size: 45%;
+      background-repeat: no-repeat;
+      background-position-x: center;
+    }
+
+    .courses-card {
+      background-image: url('imgs/courses.png');
+      background-size: 50%;
+      background-repeat:no-repeat;
+      background-position-x: center;
+    }
+
+    .discord-card {
+      background-image: url('imgs/discord.png');
+      background-size: 100%;
+      background-repeat:no-repeat;
+      background-position-x: center;
+    }
+  
+  </style>
+
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <img class="logo" src="imgs/logo.png">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none px-3">
+        <span id="savvy-link" class="fs-4">SavvyNik</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="videos.html" class="nav-link">Videos</a></li>
+        <li class="nav-item"><a href="https://learn.savvynik.com" class="nav-link">Downloads</a></li>
+        <li class="nav-item"><a href="#youtube" class="nav-link">YouTube</a></li>
+        <li class="nav-item"><a href="https://github.com/SavvyNik" class="nav-link">GitHub</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+      </ul>
+    </header>
+    <div class="d-flex float-end">
+      <div class="form-check form-switch" onclick="darkMode()">
+        <input class="form-check-input" type="checkbox" id="darkModeSwitch">
+        <label class="form-check-label" for="darkModeSwitch">Dark</label>
+      </div>
+    </div>
+    <header class="d-flex flex-wrap justify-content-center py-3" id="savvy-header">
+        <img width="80%" src="imgs/header.png">
+    </header>
+    <div class="px-4 text-center" id="youtube">
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Get updates, access to my blog, and more by joining my newsletter.</p>
+        <form class="form-inline" action="https://learn.savvynik.com/email_lists/296477/subscriptions" accept-charset="UTF-8" method="post">
+          <div class="form-group mx-sm-3 mb-2">
+            <input type="email" name="email" required="required" placeholder="Email" class="form-control">
+          </div>
+          <button type="submit" value="Join" class="btn btn-primary mb-2">Submit</button><br>
+          <small id="emailHelp" class="form-text text-muted">You're signing up to receive emails from SavvyNik</small>
+        </form>
+      </div>
+    </div>
+
+    <div class="container px-4 py-5" id="custom-cards">
+      <h2 class="pb-2 border-bottom">Over 7 Million Views</h2>
+  
+      <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        <div class="col">
+          <a href="https://youtube.com/c/savvynik" style="text-decoration: none;" target="_blank">
+            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg youtube-card">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+              <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">YouTube Videos that teach tech.</h2>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                  <img src="imgs/logo.png" alt="Bootstrap" width="32" height="32" class="rounded-circle">
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                  <small>YouTube</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                  <small>7M</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </a>
+        </div>
+  
+        <div class="col">
+          <a href="https://learn.savvynik.com" style="text-decoration: none;" class="bg-dark">
+          <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg courses-card">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+              <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Courses that you can take online.</h2>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                  <img src="imgs/logo.png" alt="Bootstrap" width="32" height="32" class="rounded-circle">
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                  <small>Courses</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                  <small>2+</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+          </a>
+        </div>
+  
+        <div class="col">
+          <a href="https://discord.gg/P9QC2km" style="text-decoration: none;" target="_blank">
+          <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg discord-card">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+              <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">A helpful community that you can join.</h2>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                  <img src="imgs/logo.png" alt="Bootstrap" width="32" height="32" class="rounded-circle">
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                  <small>Discord</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                  <small>500+</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      </a>
+    </div>
+
+    <div class="px-4 pt-5 my-5 text-center border-bottom" id="youtube">
+      <h1 class="display-4 fw-bold">Find me on YouTube.</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">I have over 500 videos ranging on topics from Linux, Programming, and Engineering. The goal is to help
+          people learn about various subjects that can help them excel in business, programming, and engineering. Also, it's great to see
+          what kind of material you'll be getting into if you're undecided about where to start or if you should attend university.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+          <a href="https://youtube.com/c/savvynik" target="_blank"><button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Go to YT!</button></a>
+          <a href="#about" ><button type="button" class="btn btn-outline-secondary btn-lg px-4">Read More.</button></a>
+        </div>
+      </div>
+      <div class="overflow-hidden" style="max-height: 30vh;">
+        <div class="container px-5">
+          <img src="imgs/screenshot.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="" width="700" height="500" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">  
+      <div id="courses" class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">New Content!</h1>
+          <p class="col-md-8 fs-4"> Digital content is now available on the courses tab. I'm constantly working on creating more. Explore the world of Linux with a Checklist and Mind Map of the Linux System.</p>
+          <a href="https://learn.savvynik.com"><button class="btn btn-primary btn-lg" type="button">Learn</div></a>
+      </div>
+  
+      <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+          <div class="h-100 p-5 text-white bg-dark rounded-3 border">
+            <h2>Build a Custom Webpage</h2>
+            <p>In this course, I'll teach you how to build your own custom landing web page or portfolio. Learn how to setup a project, use a framework, and keep your website mobile friendly with many tips & tricks. </p>
+            <a href="https://learn.savvynik.com"><button class="btn btn-outline-light" type="button">Web Course</button></a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="networking" class="h-100 p-5 bg-light border rounded-3">
+            <h2>Networking</h2>
+            <p>Ever wonder how networks work? Routers, ethernet, addressing, etc, keep us connected to the internet. Learn about local networks, troubleshooting, and how it communicates to the outside world.</p>
+            <a href="https://learn.savvynik.com"><button id="network-button" class="btn btn-outline-dark" type="button">Networks</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container d-flex flex-wrap py-3 mb-4">
+    <div class="row p-lg-4 my-5">
+      <div class="col-sm-12 col-md-12 col-lg-4 text-center">
+        <img width="90%" src="imgs/thinkpad.jpeg">
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-8 py-4">
+        <h2 id="about">Linux and Programming</h2>
+        <p class="lead">
+          I've been working on providing Linux and Programming videos/tutorials for the YouTube community for 2 years. 
+          Learning is an exciting way to get involved. It excites me to be able to teach others and spread knowledge 
+          about Linux, Programming, and Engineering. I've been practicing as an Engineer for almost a decade. 
+          I love learning about new subjects and helping others.
+        </p>
+
+        <p>
+          The goal is to offer courses and knowledge to people so that they can have the necessary tools to exceed in whatever ways
+          they see fit. A lot of my material is based on real world experiences and university studies. 
+          Sharing knowledge is a great way to bring people together and help one another. 
+        </p>
+
+        <p>
+          Most people who find this website will be through YouTube and therefore already know my style of teaching. 
+          My courses are affordable thanks to people who donate. I don't want barriers for people who want to learn about new subjects, 
+          but some paid content, like courses, allow me to offer other content for free. YouTube is where I post free videos. 
+        </p>
+      </div>
+    </div>
+    <div class="row p-lg-4">
+      <div class="col-sm-12 col-md-12 col-lg-4">
+        <h2>Electronics and Electrical Enginneering</h2>
+        <p>
+          I'm working on providing people with electronics and electrical engineering knowledge and getting others excited about engineering. 
+          As I've stated, I'm a practicing engineer and some of my passions are working with electronics and microcontrollers, hence the linux, programming, 
+          and engineering theme. I want to provide knowledge and lessons about engineering since there's a lack of information about it on YouTube 
+          and the internet in general.
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-8 py-4 text-center">
+        <img width="85%" src="imgs/microcontrol.jpeg">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Videos</a></li>
+        <li class="nav-item"><a href="https://learn.savvynik.com" class="nav-link px-2 text-muted">Courses</a></li>
+        <li class="nav-item"><a href="#youtube" class="nav-link px-2 text-muted">YouTube</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link px-2 text-muted">About</a></li>
+      </ul>
+      <p class="text-center text-muted">© 2023 SavvyNik</p>
+    </footer>
+  </div>
+</main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    let dark = 0;
+      function darkMode() {
+         var element = document.body;
+         element.classList.toggle("bg-dark");
+         element.classList.toggle("text-light");
+         element = document.getElementById("savvy-header")
+         element.classList.toggle("invert");
+
+         element = document.getElementById("savvy-link")
+         element.classList.toggle("text-light");
+
+         element = document.getElementById("courses")
+         element.classList.toggle("bg-dark");
+
+         element = document.getElementById("networking")
+         element.classList.toggle("bg-dark");
+
+         element = document.getElementById("network-button")
+         element.classList.toggle("bg-light");
+
+         if(!dark){
+          element = document.querySelectorAll(".nav-link");
+          for (let i = 0; i < element.length; i++) {
+              element[i].style.color = "white";
+          }
+          dark=1;
+         }
+         else {
+          element = document.querySelectorAll(".nav-link");
+          for (let i = 0; i < element.length; i++) {
+              element[i].style.color = "black";
+          }
+          dark=0;
+         }
+      }
+      </script>
+
+  </body>
+</html>
